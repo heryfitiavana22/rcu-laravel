@@ -49,10 +49,10 @@ class AppServiceProvider extends ServiceProvider
     {
         // other ...
         $this->app->singleton(UploadController::class, function ($app) {
-            $cocustomConfignfig = [
+            $customConfig = [
                 "store" => new JsonStoreProvider('rcu/uploads.json'),
-                "tmpDir" => "rcuc/tmp",
-                "outputDir" => "rcuc/output",
+                "tmpDir" => "rcu/tmp",
+                "outputDir" => "rcu/output",
                 "onCompleted" => function ($data) {
                 },
             ];
@@ -64,6 +64,64 @@ class AppServiceProvider extends ServiceProvider
     {
     }
 }
+```
+
+
+## API
+
+### RCUConfig <Badge type="info" text="interface" />
+
+```php
+[
+    "store" => new JsonStoreProvider('rcu/uploads.json'),
+    "tmpDir" => "rcu/tmp",
+    "outputDir" => "rcu/output",
+    "onCompleted" => function ($data) {
+    },
+]
+```
+
+#### store
+
+- Type: `StoreProviderInterface`
+- Default: `JsonStoreProvider`
+
+The `store` parameter is used to store information about the upload, such as the number of the last uploaded chunk, the total number of chunks, etc. The default store is JSON, but you can implement your own by implementing the [StoreProviderInterface](#storeproviderinterface).
+
+#### tmpDir
+
+- Type: `string`
+- Default: `rcu/tmp`
+
+Directory to save all binary chunks.
+
+#### outputDir
+
+- Type: `string`
+- Default: `rcu/output`
+
+Directory to save the complete file.
+
+#### onCompleted
+
+- Type: `(data: ['outputFile' => string, 'fileId' => string]) => void`
+
+This callback function can be used to perform any additional actions or operations after the upload is completed, such as updating a database record or sending a notification.
+
+- `outputFile`: Path of the uploaded file.
+- `fileId`: The ID of the file used to identify the upload. This is specified from [frontend](/guide/frontend-api#setfileid).
+
+### StoreProviderInterface <Badge type="info" text="interface" />
+
+```php
+interface StoreProviderInterface
+{
+    public function getItem(String $id);
+    public function createItem(String $id, Int $chunkCount);
+    public function updateItem(String $id, $update);
+    public function removeItem(String $id);
+}
+
 ```
 
 ## License
