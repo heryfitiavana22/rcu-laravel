@@ -1,11 +1,11 @@
 <?php
 
-namespace RCU\Controllers;
+namespace Heryfitiavana\RCU\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
-use RCU\Services\RCUService;
+use Heryfitiavana\RCU\Services\RCUService;
 
 class UploadController extends Controller
 {

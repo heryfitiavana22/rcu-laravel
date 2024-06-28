@@ -1,20 +1,27 @@
 {
-    "name": "heryfitiavana/rcu-laravel",
-    "description": "rcu",
-    "autoload": {
-        "psr-4": {
-            "Heryfitiavana\\RcuLaravel\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "heryfitiavana22",
-            "email": "hheryfitiavana@gmail.com"
-        }
-    ],
-    "require": {
-        "illuminate/support": "^11.13",
-        "illuminate/http": "^11.13",
-        "illuminate/routing": "^11.13"
+  "name": "heryfitiavana/rcu-laravel",
+  "description": "rcu",
+  "autoload": {
+    "psr-4": {
+      "Heryfitiavana\\RCU\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "heryfitiavana22",
+      "email": "hheryfitiavana@gmail.com"
+    }
+  ],
+  "require": {
+    "illuminate/support": "^11.13",
+    "illuminate/http": "^11.13",
+    "illuminate/routing": "^11.13"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Heryfitiavana\\RCU\\RCUServiceProvider"
+      ]
+    }
+  }
 }

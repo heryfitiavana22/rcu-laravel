@@ -1,6 +1,6 @@
 <?php
 
-namespace RCU\Contracts;
+namespace Heryfitiavana\RCU\Contracts;
 
 interface RCUServiceInterface
 {

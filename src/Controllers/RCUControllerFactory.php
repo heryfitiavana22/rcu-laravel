@@ -1,9 +1,9 @@
 <?php
 
-namespace RCU\Controllers;
+namespace Heryfitiavana\RCU\Controllers;
 
-use RCU\Services\RCUService;
-use RCU\StoreProviders\JsonStoreProvider;
+use Heryfitiavana\RCU\Services\RCUService;
+use Heryfitiavana\RCU\StoreProviders\JsonStoreProvider;
 
 class RCUControllerFactory
 {

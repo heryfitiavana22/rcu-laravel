@@ -1,9 +1,9 @@
 <?php
 
-namespace RCU\Services;
+namespace Heryfitiavana\RCU\Services;
 
 use Illuminate\Support\Facades\Storage;
-use RCU\Contracts\RCUServiceInterface;
+use Heryfitiavana\RCU\Contracts\RCUServiceInterface;
 
 class RCUService implements RCUServiceInterface
 {

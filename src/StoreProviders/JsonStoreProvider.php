@@ -1,9 +1,9 @@
 <?php
 
-namespace RCU\StoreProviders;
+namespace Heryfitiavana\RCU\StoreProviders;
 
 use Illuminate\Support\Facades\Storage;
-use RCU\Contracts\StoreProviderInterface;
+use Heryfitiavana\RCU\Contracts\StoreProviderInterface;
 
 class JsonStoreProvider implements StoreProviderInterface
 {

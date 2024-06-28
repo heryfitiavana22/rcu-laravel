@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Providers;
+namespace Heryfitiavana\RCU;
 
 use Illuminate\Support\ServiceProvider;
-use RCU\Contracts\RCUServiceInterface;
-use RCU\Contracts\StoreProviderInterface;
-use RCU\Controllers\RCUControllerFactory;
-use RCU\Controllers\UploadController;
-use RCU\Services\RCUService;
-use RCU\StoreProviders\JsonStoreProvider;
+use Heryfitiavana\RCU\Contracts\RCUServiceInterface;
+use Heryfitiavana\RCU\Contracts\StoreProviderInterface;
+use Heryfitiavana\RCU\Controllers\RCUControllerFactory;
+use Heryfitiavana\RCU\Controllers\UploadController;
+use Heryfitiavana\RCU\Services\RCUService;
+use Heryfitiavana\RCU\StoreProviders\JsonStoreProvider;
 
 class RCUServiceProvider extends ServiceProvider
 {
@@ -23,8 +23,5 @@ class RCUServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        // $this->publishes([
-        //     __DIR__.'/../config/rcu.php' => config_path('rcu.php'),
-        // ]);
     }
 }
