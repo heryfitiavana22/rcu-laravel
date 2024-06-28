@@ -1,6 +1,8 @@
 {
   "name": "heryfitiavana/rcu-laravel",
   "description": "Resumable chunk upload for Laravel",
+  "homepage": "https://github.com/heryfitiavana22/rcu-laravel",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "Heryfitiavana\\RCU\\": "src/"
