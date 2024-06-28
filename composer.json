@@ -1,6 +1,6 @@
 {
   "name": "heryfitiavana/rcu-laravel",
-  "description": "rcu",
+  "description": "Resumable chunk upload for Laravel",
   "autoload": {
     "psr-4": {
       "Heryfitiavana\\RCU\\": "src/"

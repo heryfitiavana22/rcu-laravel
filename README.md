@@ -55,7 +55,7 @@ Route::post('/upload', function () use ($RCUController) {
 ```
 
 #### Option 2: Using a Service Provider
-1. Create a new service provider file at `app/Providers/RCUServiceProvider.
+1. Create a new service provider file at `app/Providers/RCUServiceProvider`.
 
 ```php
 <?php
