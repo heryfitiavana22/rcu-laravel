@@ -15,26 +15,26 @@ class UploadController extends Controller
 
     public function uploadStatus(Request $request)
     {
-        $query = [
-            'fileId' => $request->fileId,
-            'chunkCount' => $request->chunkCount,
-        ];
+        $query = $request->validate([
+            'fileId' => 'required|string|min:1',
+            'chunkCount' => 'required|integer',
+        ]);
+
         $status = $this->rcuService->uploadStatus($query);
         return Response::json($status);
     }
 
     public function upload(Request $request)
     {
-        $dto = [
-            'fileId' => $request->fileId,
-            'chunkNumber' => $request->chunkNumber,
-            'originalFilename' => $request->originalFilename,
-            'chunkCount' => $request->chunkCount,
-            'chunkSize' => $request->chunkSize,
-            'fileSize' => $request->fileSize,
-            'file' => $request->file('file')->get(),
-        ];
-
+        $dto = $request->validate([
+            'fileId' => 'required|string|min:1',
+            'chunkNumber' => 'required|integer',
+            'originalFilename' => 'required|integer',
+            'chunkCount' => 'required|integer',
+            'chunkSize' => 'required|integer',
+            'fileSize' => 'required|integer',
+            'file' => 'required|file',
+        ]);
 
         $result = $this->rcuService->upload($dto);
 
