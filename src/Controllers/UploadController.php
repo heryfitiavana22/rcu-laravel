@@ -29,7 +29,7 @@ class UploadController extends Controller
         $dto = $request->validate([
             'fileId' => 'required|string|min:1',
             'chunkNumber' => 'required|integer',
-            'originalFilename' => 'required|integer',
+            'originalFilename' => 'required|string|min:1',
             'chunkCount' => 'required|integer',
             'chunkSize' => 'required|integer',
             'fileSize' => 'required|integer',
