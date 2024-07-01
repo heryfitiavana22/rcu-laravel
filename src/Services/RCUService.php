@@ -67,7 +67,7 @@ class RCUService implements RCUServiceInterface
             }
 
             fwrite($combinedFile, Storage::get($chunkPath));
-            Storage::delete($chunkPath);
+            Storage::deleteDirectory($chunkPath);
         }
 
         fclose($combinedFile);
