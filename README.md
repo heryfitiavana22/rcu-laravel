@@ -56,7 +56,7 @@ $customConfig = [
 
 Go to `app/Providers/AppServiceProvider.php` and add the following code
 
-```php{3-5,12-21}
+```php
 
 use Illuminate\Support\ServiceProvider;
 use Heryfitiavana\RCU\Controllers\RCUControllerFactory;
