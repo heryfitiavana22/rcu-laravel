@@ -38,6 +38,9 @@ Route::post('/upload', [UploadController::class, 'upload']);
 
 Default RCU configuration : [RCUConfig](#rcuconfig)
 
+<details>
+  <summary>Custom RCU configuration</summary>
+  
 ### Custom RCU configuration
 
 You can customize the package's behavior by defining a custom configuration array. Here's an example:
@@ -85,6 +88,7 @@ class AppServiceProvider extends ServiceProvider
     }
 }
 ```
+</details>
 
 ## API
 
