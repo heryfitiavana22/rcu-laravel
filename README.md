@@ -39,7 +39,7 @@ Route::post('/upload', [UploadController::class, 'upload']);
 Default RCU configuration : [RCUConfig](#rcuconfig)
 
 <details>
-  <summary>Custom RCU configuration</summary>
+  <summary><h3>Custom RCU configuration</h3></summary>
   
 ### Custom RCU configuration
 
